@@ -23,8 +23,8 @@ jobs:
       run: |
          git config --local user.email "sample@gmail.com"
          git config --local user.name "syukib"
-         git add README.md
-         git commit -m "update readme.md"
+         git add lifecycle_result_data.csv
+         git commit -m "update lifecycle_result_data.csv"
     - name: Push changes
       uses:  ad-m/github-push-action@master
       with:
