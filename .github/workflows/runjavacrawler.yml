@@ -1,0 +1,32 @@
+name: Java CI with Maven
+on:
+  push:
+    branches: [ main ]
+  #schedule:
+    # Runs at 17:00 UTC every day
+    #- cron:  '52 02 * * *'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - name: Set up JDK 1.8
+      uses: actions/setup-java@v1
+      with:
+        java-version: 1.8
+    - name: Build with Maven
+      run: mvn -B package --file pom.xml
+    - name: Run Java Application
+      run: java -jar target/Git-testing-jar-with-dependencies.jar
+    - name: Commit files
+      run: |
+         git config --local user.email "sample@gmail.com"
+         git config --local user.name "syukib"
+         git add README.md
+         git commit -m "update readme.md"
+    - name: Push changes
+      uses:  ad-m/github-push-action@master
+      with:
+         github_token: ${{ secrets.MY_GIT_TOKEN }}
+         branch: main
