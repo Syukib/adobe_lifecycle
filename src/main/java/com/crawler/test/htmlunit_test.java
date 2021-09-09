@@ -19,7 +19,7 @@ public class htmlunit_test {
 	public static void main(String[] args) throws IOException {
         String url = "https://helpx.adobe.com/support/programs/eol-matrix.html";
 		HtmlPage page = CrawlerUtils.getPage(url);
-		List<HtmlTable> tables = page.getByXPath("//table");
+		List<HtmlTable> tables = (List<HtmlTable>) page.getByXPath("//table");
 		
         if (Files.exists(lifecycle_result_data)) {
         	Files.delete (lifecycle_result_data);
