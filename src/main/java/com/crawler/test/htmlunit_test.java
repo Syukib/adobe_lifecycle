@@ -10,6 +10,7 @@ import java.util.List;
 
 import com.gargoylesoftware.htmlunit.html.HtmlElement;
 import com.gargoylesoftware.htmlunit.html.HtmlPage;
+import com.gargoylesoftware.htmlunit.html.HtmlTable;
 
 public class htmlunit_test {
 	//for github actions testing
