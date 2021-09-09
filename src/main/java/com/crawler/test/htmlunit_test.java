@@ -63,7 +63,7 @@ public class htmlunit_test {
 				System.out.println(product + " | " + version + " | " + sp);
 				
 		        Files.write(lifecycle_result_data, "\"".getBytes(), StandardOpenOption.APPEND);
-		        Files.write(lifecycle_result_data, "Publisher".getBytes(), StandardOpenOption.APPEND);
+		        Files.write(lifecycle_result_data, "Adobe".getBytes(), StandardOpenOption.APPEND);
 		        Files.write(lifecycle_result_data, "\"".getBytes(), StandardOpenOption.APPEND);
 		        Files.write(lifecycle_result_data, ",".getBytes(), StandardOpenOption.APPEND);
 		        Files.write(lifecycle_result_data, "\"".getBytes(), StandardOpenOption.APPEND);
